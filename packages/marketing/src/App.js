@@ -23,5 +23,5 @@ export default () => {
         </BrowserRouter>
       </StylesProvider>
     </div>
-  );
+  )
 };
