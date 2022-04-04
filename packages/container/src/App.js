@@ -5,7 +5,7 @@ import MarketingApp from './components/MarketingApp';
 import Header from './components/Header';
 
 //this will generate all class names in production for container app with a prefix
-// of 'co' instead of 'jss1,2,3,etc'
+// of 'co' instead of 'jss1,2,3,4,etc'
 const generateClassName = createGenerateClassName({
   productionPrefix: 'co'
 });
