@@ -5,7 +5,7 @@ import App from './App';
 
 // Mount function to start up the app
 // onNavigate is the key inside of the callback function argument
-const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+const mount = (el, { onSignIn, onNavigate, defaultHistory, initialPath }) => {
 
   //if we provided a default history, use it, if not, use memory
   // || means 'or'
@@ -22,7 +22,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   // is going to call any function that we provided to this listen
 
 
-  ReactDOM.render(<App history={history} />, el);
+  ReactDOM.render(<App onSignIn={onSignIn} history={history} />, el);
 
   return {
     //inside of here, we are going to place some number of functions
