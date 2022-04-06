@@ -1,4 +1,4 @@
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -8,8 +8,8 @@ export default () => {
 
   useEffect(() => {
     const { onParentNavigate } = mount(ref.current, {
-      initialPath: history.location.pathname,
-      onNavigate: ({ pathname: nextPathname}) => {
+        initialPath: history.location.pathname,
+      onNavigate: ({ pathname: nextPathname }) => {
         //this where we figure out what url the marketing app navigated to
         //then use that to update the browser history in container
         const { pathname } = history.location;

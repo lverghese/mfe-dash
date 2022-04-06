@@ -5,12 +5,14 @@ import App from './App';
 
 // Mount function to start up the app
 // onNavigate is the key inside of the callback function argument
-const mount = (el, { onNavigate, defaultHistory }) => {
+const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
 
   //if we provided a default history, use it, if not, use memory
   // || means 'or'
-  const history = defaultHistory || createMemoryHistory();
-
+  const history = defaultHistory || createMemoryHistory({
+    initialEntries: [initialPath],
+  });
+  
   if (onNavigate) {
     history.listen(onNavigate);
   }
